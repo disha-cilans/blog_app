@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: python3 -m install virtualenv
+      - run: pip install virtualenv
       - run: virtualenv venv --python=python3
       - run: source venv/bin/activate
       - run: pip install -r requirements.txt
