@@ -17,4 +17,4 @@ jobs:
           instance-ids: ${{ secrets.INSTANCE_ID  }}
           comment: Deploy the dev branch
           working-directory: /home/ubuntu/django-blog_app
-          command: /bin/sh ./deploy.sh
+        run: /bin/sh ./deploy.sh
