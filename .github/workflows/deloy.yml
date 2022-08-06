@@ -7,8 +7,9 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - name: GitHub VM - SSH Connection
-      - uses: actions/checkout@v2
+      - name: Checkout action
+        uses: actions/checkout@v2
+      - name: Action for AWS-SSM
       - uses: peterkimzz/aws-ssm-send-command@1.0.1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID  }}
