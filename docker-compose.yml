@@ -1,0 +1,10 @@
+version: "1.0"
+   
+services:
+  web:
+    build: .
+    command: gunicorn -b 0.0.0.0 -p 8000 blog_app.wsgi:application --workers 4
+    environment: &envVars
+      - DEBUG=false
+    ports:
+      - "80:8000"
