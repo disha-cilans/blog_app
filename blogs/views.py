@@ -19,7 +19,7 @@ class BlogList(APIView):
     List all snippets, or create a new blogs.
     """
     def get(self,request,format = None):
-        blogs = Blog.Objects.all()
+        blogs = Blog.objects.all()
         serializer = BlogSerializer(blogs,many=True)
         return Response(serializer.data)
 
