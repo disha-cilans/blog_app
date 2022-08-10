@@ -1,4 +1,4 @@
 #!/bin/sh     
 docker-compose down
-docker system prune -f
+docker image prune -f
 docker-compose up -d
