@@ -3,7 +3,7 @@ from rest_framework import serializers
 from blogs.models import Blog
 
 
-class BlogSerializer(serializers.HyperlinkedModelSerializer):
+class BlogSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Blog
